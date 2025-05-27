@@ -1,26 +1,25 @@
+/*Desarrolla un programa que pida ingresar un numero entero, el programa sumara solo los numeros positivos.
+El ciclo terminara cuando ingrese un numero negativo. Mostrara la suma al final*/
 #include <iostream>
 using namespace std;
 
 int main (){
-int numero, arreglo[10], suma;
- while (numero >=0)
- {
-    cout<< "ingrese sus numeros: "<<endl;
+//declaramos las variables
+    int numero, suma=0;
+
+    //Pedimos el nuemero 
+    cout << "Ingrese un numero entero: ";
     cin >> numero;
 
-   if (numero >= 0)
-   {
-      for (int i = 0; i < 10; i++)
-      {
-         arreglo[i] = numero;
-      }
-   }
-   else{
+    while (numero >= 0)
+    {
+        suma += numero; //sumamos el numero ingresado a la suma
+        cout << "Ingresen otro numero entero: ";
+        cin >> numero;
+    }
+    cout << "La suma de los numeros positivos es: " << suma << endl;
 
-   }
-   for (int i=10; i<4; i++){
-      suma= suma+arreglo[1];
- }
+    
+
     return 0;
-}
 }
